@@ -35,6 +35,7 @@ namespace lab05_security
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<IdentityUser>(options => {
                 options.SignIn.RequireConfirmedAccount = true;
+                options.SignIn.RequireConfirmedEmail = true;
 
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;

@@ -48,6 +48,8 @@ namespace lab05_security
                 options.User.RequireUniqueEmail = true;
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.Configure<PasswordHasherOptions>(options => options.IterationCount = 310000);
             services.AddRazorPages();
         }
 
